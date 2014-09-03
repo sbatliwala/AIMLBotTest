@@ -1,6 +1,5 @@
 using System;
 using AIMLbot;
-using System.Xml;
 
 namespace LucyBot
 {
@@ -24,18 +23,18 @@ namespace LucyBot
                 }
                 var r = new Request(input, myUser, customBot);
                 var res = customBot.Chat(r);
-                Console.WriteLine(res);
-                var xdoc = new XmlDocument();
-                string result = res as string;
-                xdoc.LoadXml(res);
-                var root = xdoc.DocumentElement;
-                if (root.HasAttribute("type"))
-                {
-                    String type = root.GetAttribute("genre");
-                    Console.WriteLine(type);
+                //Console.WriteLine(res);
+                //var xdoc = new XmlDocument();
+                //string result = res as string;
+                //xdoc.LoadXml(res);
+                //var root = xdoc.DocumentElement;
+                //if (root.HasAttribute("type"))
+                //{
+                //    String type = root.GetAttribute("type");
+                //    Console.WriteLine(type);
 
                     
-                }
+                //}
                 Console.WriteLine("Lucy: " + res.Output);
             }
         }
